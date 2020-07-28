@@ -1,0 +1,126 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+ background-color: #edf1f4;
+ color: #153d66;
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+#parent {
+ display: grid;
+ grid-template-columns: 60px 400px 60px 600px;
+ grid-template-rows: auto;
+}
+
+
+.alert {
+ border-radius: 4px;
+ border: 1px solid red;
+ margin: 3px auto 0;
+ padding: 8px 12px;
+ text-align: left;
+ background-color: #ffe6e6;
+ width: 100%
+
+}
+
+.wrapper {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding-top: 20px;
+}
+
+.grid-container {
+ display: grid;
+ grid-template-rows: 
+   [header-start] 1fr
+   [body-start header-end] 1fr
+   [body-end footer-start] 1fr
+   [footer-end] ;    
+   
+   
+ grid-template-columns: 
+   [header-start body-start footer-start] 1fr
+   1fr
+   [body-end] 1fr
+   [header-end  footer-end] ;    
+
+}
+
+#grid-item1 {
+   grid-area: header;
+   background-color: red;
+}
+
+#grid-item2 {
+   grid-area: body;
+   background-color: white;
+}
+
+#grid-item3 {
+   grid-area: footer;
+   background-color: green;
+}
+
+.theSelect {
+border-radius: 4px;
+background-color: white;
+display: block;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+height: 40px;
+}
+
+button, select:focus {
+ 
+ border-color: rgb(102, 175, 233);
+ box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px inset,
+   rgba(102, 175, 233, 0.6) 0px 0px 8px;
+ outline: none;
+}
+
+input:not([type]), input[type="text"], select {
+ border-radius: 4px;
+ border: 1px solid #a4b6c0;
+ box-shadow: none;
+ display: block;
+ margin-bottom: 4px;
+ padding: 10px 10px 10px 10px;
+
+ font-size: 18px;
+}
+
+.set-red {
+ background: #ffcccc;
+}
+.set-green {
+ background: #ccffdd;
+}
+
+.theInput {
+  padding-top: 10px;
+}
+
+.padding-row {
+    height: 5px;
+}
+
+.heading-set {
+  background-color: #b3f0ff;
+  border-radius: 4px;
+  padding: 6px 6px 12px 12px;
+}
+
+.main {
+  margin-top: 20px;
+  margin-bottom: 300px;
+}
